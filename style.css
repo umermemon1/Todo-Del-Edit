@@ -2,7 +2,7 @@
 :root {
   --bg: #fdfaf5;
   --card: #ffffff;
-  --accent: #e07a5f;        /* soft coral */
+  --accent: #e07a5f; /* soft coral */
   --accent-dark: #c95c44;
   --text: #2d2a32;
   --muted: #7a7680;
@@ -20,7 +20,8 @@
 body {
   min-height: 100dvh;
   background: linear-gradient(135deg, #fff8f2 0%, #fdf6f0 50%, #f9f0e8 100%);
-  font-family: "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-family: "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji",
+    sans-serif;
   color: var(--text);
   padding: 4rem 1.5rem 8rem;
   background-attachment: fixed;
@@ -37,8 +38,16 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(224,122,95,0.06) 0%, transparent 25%),
-              radial-gradient(circle at 80% 70%, rgba(224,122,95,0.05) 0%, transparent 30%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(224, 122, 95, 0.06) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(224, 122, 95, 0.05) 0%,
+      transparent 30%
+    );
   pointer-events: none;
   animation: gentleDrift 28s infinite alternate ease-in-out;
 }
@@ -51,7 +60,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 8px rgba(224,122,95,0.18);
+  text-shadow: 0 2px 8px rgba(224, 122, 95, 0.18);
 }
 
 p.subtitle {
@@ -161,13 +170,19 @@ button.edit {
   transition: all 0.22s ease;
 }
 
-button.delete { color: #e63946; }
+button.delete {
+  color: #e63946;
+}
 button.delete:hover {
   background: rgba(230, 57, 70, 0.12);
   transform: scale(1.15);
 }
 
-button.edit { color: var(--accent); }
+button.edit {
+  color: var(--accent);
+  left: 10px;
+  position: relative;
+}
 button.edit:hover {
   background: rgba(224, 122, 95, 0.12);
   transform: scale(1.15);
@@ -194,6 +209,10 @@ button.edit:hover {
 }
 
 @keyframes gentleDrift {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(20px, -30px); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, -30px);
+  }
 }
